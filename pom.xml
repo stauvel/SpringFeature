@@ -13,25 +13,33 @@
         <spring.version>3.2.14.RELEASE</spring.version>
         <jstl.version>1.2</jstl.version>
         <servletapi.version>2.5</servletapi.version>
+        <slf4j.version>1.7.12</slf4j.version>
+        <jsp.version>2.0</jsp.version>
     </properties>
 
     <dependencies>
 
-        <!-- Spring MVC framework -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
             <version>${spring.version}</version>
         </dependency>
-
-        <!-- JSTL -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
         </dependency>
+        <dependency>
+            <groupId>javax.servlet</groupId>
+            <artifactId>jsp-api</artifactId>
+            <version>${jsp.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
 
-        <!-- for compile only, your container should have this -->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>servlet-api</artifactId>
@@ -68,7 +76,7 @@
                         <force>true</force>
                         <systemProperty>
                             <name>spring.profiles.active</name>
-                            <value>nope</value>
+                            <value>dev</value>
                         </systemProperty>
                     </systemProperties>
                 </configuration>
